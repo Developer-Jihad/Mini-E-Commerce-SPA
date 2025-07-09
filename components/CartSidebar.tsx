@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function CartSidebar() {
-  return (
-    <div>CartSidebar</div>
-  )
+  return <div>CartSidebar</div>;
 }
 
-export default CartSidebar
+export default CartSidebar;
