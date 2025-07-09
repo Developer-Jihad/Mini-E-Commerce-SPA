@@ -13,6 +13,10 @@ import {
   useMediaQuery,
   useTheme,
   Drawer,
+  Stack,
+  alpha,
+  Tooltip,
+  Container,
 } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -51,14 +55,56 @@ export default function Navbar() {
 
   const navLinks = (
     <>
-      <Button color="inherit" component={Link} href="/">
+      <Button
+        color="inherit"
+        component={Link}
+        href="/"
+        sx={{
+          fontWeight: 600,
+          letterSpacing: 1,
+          px: 2,
+          borderRadius: 99,
+          transition: "background 0.2s",
+          "&:hover": {
+            background: alpha(theme.palette.common.white, 0.08),
+          },
+        }}
+      >
         Home
       </Button>
-      <Button color="inherit" component={Link} href="/products">
+      <Button
+        color="inherit"
+        component={Link}
+        href="#products"
+        sx={{
+          fontWeight: 600,
+          letterSpacing: 1,
+          px: 2,
+          borderRadius: 99,
+          transition: "background 0.2s",
+          "&:hover": {
+            background: alpha(theme.palette.common.white, 0.08),
+          },
+        }}
+      >
         Products
       </Button>
-      <Button color="inherit" component={Link} href="/about">
-        About Us
+      <Button
+        color="inherit"
+        component={Link}
+        href="#about"
+        sx={{
+          fontWeight: 600,
+          letterSpacing: 1,
+          px: 2,
+          borderRadius: 99,
+          transition: "background 0.2s",
+          "&:hover": {
+            background: alpha(theme.palette.common.white, 0.08),
+          },
+        }}
+      >
+        About
       </Button>
     </>
   );
@@ -68,87 +114,186 @@ export default function Navbar() {
       <AppBar
         position="fixed"
         color="primary"
+        elevation={4}
         sx={{
           top: 0,
           zIndex: (theme) => theme.zIndex.drawer + 1,
+          background: "linear-gradient(90deg, #181c24 0%, #2d2250 100%)",
+          boxShadow: "0 4px 24px 0 rgba(127,0,255,0.10)",
         }}
       >
-        <Toolbar sx={{ justifyContent: "space-between" }}>
-          {/* Left: Logo */}
-          <Typography
-            variant="h6"
-            component={Link}
-            href="/"
-            sx={{ textDecoration: "none", color: "white" }}
+        <Container maxWidth="lg" disableGutters={true}>
+          <Toolbar
+            sx={{
+              justifyContent: "space-between",
+              minHeight: { xs: 60, sm: 72 },
+              px: { xs: 1, sm: 3 },
+            }}
           >
-            🛍️ ShopMate
-          </Typography>
+            {/* Left: Logo */}
+            <Stack direction="row" alignItems="center" spacing={1}>
+              <Box
+                component={Link}
+                href="/"
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  textDecoration: "none",
+                  color: "white",
+                  fontWeight: 700,
+                  fontSize: { xs: "1.2rem", sm: "1.5rem" },
+                  letterSpacing: 1,
+                  transition: "opacity 0.2s",
+                  "&:hover": { opacity: 0.8 },
+                }}
+              >
+                <Box
+                  component="span"
+                  sx={{
+                    fontSize: "1.6rem",
+                    mr: 1,
+                    display: "inline-block",
+                    transform: "translateY(2px)",
+                  }}
+                >
+                  🛍️
+                </Box>
+                ShopMate
+              </Box>
+            </Stack>
 
-          {/* Center: Navigation Links (hide on mobile) */}
-          {!isMobile && <Box sx={{ display: "flex", gap: 2 }}>{navLinks}</Box>}
+            {/* Center: Navigation Links (hide on mobile) */}
+            {!isMobile && (
+              <Box sx={{ display: "flex", gap: 2 }}>{navLinks}</Box>
+            )}
 
-          {/* Right: Icons */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-            {/* Cart Button */}
-            <IconButton color="inherit" onClick={toggleCart}>
-              <Badge badgeContent={itemCount} color="secondary">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
-
-            {/* Profile Menu */}
-            <IconButton color="inherit" onClick={handleProfileClick}>
-              <AccountCircle />
-            </IconButton>
-            <Menu
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={handleProfileClose}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "right",
-              }}
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              disableScrollLock
-            >
-              <MenuItem onClick={handleProfileClose}>Sign In</MenuItem>
-              <MenuItem onClick={handleProfileClose}>Sign Up</MenuItem>
-              <MenuItem onClick={handleProfileClose}>Order History</MenuItem>
-            </Menu>
-
-            {/* Hamburger menu for mobile */}
-            {isMobile && (
-              <>
+            {/* Right: Icons */}
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
+              {/* Cart Button */}
+              <Tooltip title="View Cart" arrow>
                 <IconButton
                   color="inherit"
-                  onClick={() => setMobileMenuOpen(true)}
+                  onClick={toggleCart}
+                  sx={{
+                    borderRadius: 99,
+                    background: "rgba(255,255,255,0.08)",
+                    transition: "background 0.2s",
+                    "&:hover": {
+                      background: "rgba(255,255,255,0.18)",
+                    },
+                  }}
                 >
-                  <MenuIcon />
-                </IconButton>
-                <Drawer
-                  anchor="right"
-                  open={mobileMenuOpen}
-                  onClose={() => setMobileMenuOpen(false)}
-                >
-                  <Box
+                  <Badge
+                    badgeContent={itemCount}
+                    color="secondary"
                     sx={{
-                      width: 200,
-                      p: 2,
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 1,
+                      "& .MuiBadge-badge": {
+                        fontWeight: 700,
+                        fontSize: "0.85rem",
+                        minWidth: 20,
+                        height: 20,
+                      },
                     }}
                   >
-                    {navLinks}
-                  </Box>
-                </Drawer>
-              </>
-            )}
-          </Box>
-        </Toolbar>
+                    <ShoppingCartIcon sx={{ fontSize: 26 }} />
+                  </Badge>
+                </IconButton>
+              </Tooltip>
+
+              {/* Profile Menu */}
+              <Tooltip title="Profile" arrow>
+                <IconButton
+                  color="inherit"
+                  onClick={handleProfileClick}
+                  sx={{
+                    borderRadius: 99,
+                    background: "rgba(255,255,255,0.08)",
+                    transition: "background 0.2s",
+                    "&:hover": {
+                      background: "rgba(255,255,255,0.18)",
+                    },
+                  }}
+                >
+                  <AccountCircle sx={{ fontSize: 28 }} />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleProfileClose}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "right",
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                disableScrollLock
+                PaperProps={{
+                  sx: {
+                    mt: 1,
+                    minWidth: 170,
+                    borderRadius: 2,
+                    boxShadow: "0 4px 24px 0 rgba(127,0,255,0.10)",
+                    bgcolor: "#fff",
+                    color: "#222",
+                    fontWeight: 500,
+                  },
+                }}
+              >
+                <MenuItem onClick={handleProfileClose}>Sign In</MenuItem>
+                <MenuItem onClick={handleProfileClose}>Sign Up</MenuItem>
+                <MenuItem onClick={handleProfileClose}>Order History</MenuItem>
+              </Menu>
+
+              {/* Hamburger menu for mobile */}
+              {isMobile && (
+                <>
+                  <IconButton
+                    color="inherit"
+                    onClick={() => setMobileMenuOpen(true)}
+                    sx={{
+                      borderRadius: 99,
+                      background: "rgba(255,255,255,0.08)",
+                      transition: "background 0.2s",
+                      "&:hover": {
+                        background: "rgba(255,255,255,0.18)",
+                      },
+                    }}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  <Drawer
+                    anchor="right"
+                    open={mobileMenuOpen}
+                    onClose={() => setMobileMenuOpen(false)}
+                    PaperProps={{
+                      sx: {
+                        bgcolor: "#181c24",
+                        color: "#fff",
+                        width: 220,
+                        p: 0,
+                      },
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        p: 3,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 2,
+                        height: "100%",
+                      }}
+                    >
+                      {navLinks}
+                    </Box>
+                  </Drawer>
+                </>
+              )}
+            </Box>
+          </Toolbar>
+        </Container>
       </AppBar>
 
       {/* Cart Sidebar */}

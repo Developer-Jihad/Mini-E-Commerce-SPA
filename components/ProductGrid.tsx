@@ -7,7 +7,7 @@ import { products } from "@/data/products";
 
 export default function ProductGrid() {
   return (
-    <Container sx={{ py: 8 }}>
+    <Container id="products" sx={{ py: 8 }}>
       <Typography variant="h4" gutterBottom fontWeight={600}>
         Leatest Products
       </Typography>

@@ -202,7 +202,7 @@ export default function CartSidebar({ open, toggle }: Props) {
         px={3}
         py={2}
         bgcolor="#fff"
-        borderBottomLeftRadius={{ xs: 0, sm: 16 }}
+        sx={{ borderBottomLeftRadius: { xs: 0, sm: 16 } }}
       >
         <Box
           display="flex"

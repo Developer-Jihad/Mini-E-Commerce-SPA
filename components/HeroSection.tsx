@@ -46,6 +46,7 @@ export default function HeroSection() {
           all in one place.
         </Typography>
         <Button
+          href="#products"
           variant="contained"
           size="large"
           sx={{
