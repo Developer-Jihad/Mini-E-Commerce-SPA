@@ -3,7 +3,8 @@ const nextConfig = {
   images: {
     domains: [
       "placehold.co",
-      "images.unsplash.com", // add any other domains you use
+      "images.unsplash.com", 
+      "plus.unsplash.com",
     ],
   },
 };

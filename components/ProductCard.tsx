@@ -43,12 +43,12 @@ export default function ProductCard({ product }: { product: Product }) {
         },
       }}
     >
-      <Box sx={{ position: "relative" }}>
-        <Link href={`/product/${product.id}`}>
+      <Link href={`/product/${product.id}`}>
+        <Box sx={{ position: "relative" }}>
           <CardMedia
             component="img"
             image={product.image}
-            height="220"
+            height="250"
             alt={product.title}
             sx={{
               objectFit: "cover",
@@ -59,40 +59,41 @@ export default function ProductCard({ product }: { product: Product }) {
               "&:hover": { filter: "brightness(1)" },
             }}
           />
-        </Link>
-      </Box>
-      <CardContent sx={{ flexGrow: 1 }}>
-        <Typography
-          variant="subtitle1"
-          fontWeight={700}
-          gutterBottom
-          sx={{
-            color: "#222",
-            fontSize: "1.1rem",
-            mb: 0.5,
-            minHeight: 48,
-            display: "-webkit-box",
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          }}
-        >
-          {product.title}
-        </Typography>
-        <Typography
-          variant="body2"
-          color="text.secondary"
-          sx={{
-            minHeight: 36,
-            display: "-webkit-box",
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          }}
-        >
-          {product.description}
-        </Typography>
-      </CardContent>
+        </Box>
+        <CardContent sx={{ flexGrow: 1 }}>
+          <Typography
+            variant="subtitle1"
+            fontWeight={700}
+            gutterBottom
+            sx={{
+              color: "#222",
+              fontSize: "1.1rem",
+              mb: 0.5,
+              minHeight: 48,
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+            }}
+          >
+            {product.title}
+          </Typography>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{
+              minHeight: 36,
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+              textAlign: "justify",
+            }}
+          >
+            {product.description}
+          </Typography>
+        </CardContent>
+      </Link>
       <CardActions
         sx={{
           mt: "auto",
@@ -106,8 +107,8 @@ export default function ProductCard({ product }: { product: Product }) {
         <Typography
           sx={{
             fontWeight: 700,
-            fontSize: "1.15rem",
-            color: "primary.main",
+            fontSize: "1.25rem",
+            color: "#f5a008",
             letterSpacing: 0.5,
             flex: "1 1 auto",
             mb: 0,
@@ -122,8 +123,8 @@ export default function ProductCard({ product }: { product: Product }) {
           sx={{
             borderRadius: 99,
             borderWidth: 2,
-            borderColor: "primary.main",
-            color: "primary.main",
+            borderColor: "#f5a008",
+            color: "#f5a008",
             fontWeight: 700,
             textTransform: "none",
             fontSize: "1rem",
@@ -133,7 +134,7 @@ export default function ProductCard({ product }: { product: Product }) {
             background: "transparent",
             transition: "background 0.3s, color 0.3s, border-color 0.3s",
             "&:hover": {
-              background: "linear-gradient(90deg, #7F00FF 0%, #0072ff 100%)",
+              background: "#f5a008",
               color: "#fff",
               borderColor: "transparent",
               boxShadow: "0 2px 8px 0 rgba(127,0,255,0.10)",

@@ -143,7 +143,7 @@ export default function CartSidebar({ open, toggle }: Props) {
                   {item.title}
                 </Typography>
                 <Typography
-                  color="primary"
+                  color="#f5a008"
                   fontWeight={600}
                   sx={{ fontSize: "1rem" }}
                 >
@@ -220,7 +220,7 @@ export default function CartSidebar({ open, toggle }: Props) {
           <Typography
             variant="h6"
             fontWeight={700}
-            color="primary.main"
+            color="#f5a008"
             sx={{ fontSize: "1.25rem" }}
           >
             ${total.toFixed(2)}
@@ -238,15 +238,8 @@ export default function CartSidebar({ open, toggle }: Props) {
             fontWeight: 700,
             fontSize: "1.08rem",
             py: 1.3,
-            background:
-              "linear-gradient(90deg, #7F00FF 0%, #0072ff 100%)!important",
+            background: "#f5a008",
             boxShadow: "0 2px 8px 0 rgba(127,0,255,0.10)",
-            textTransform: "none",
-            transition: "background 0.3s",
-            "&:hover": {
-              background:
-                "linear-gradient(90deg, #0072ff 0%, #7F00FF 100%)!important",
-            },
           }}
         >
           Checkout

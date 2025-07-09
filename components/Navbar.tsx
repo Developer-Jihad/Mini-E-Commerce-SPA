@@ -21,6 +21,7 @@ import {
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import Link from "next/link";
 import { useState } from "react";
 import { useSelector } from "react-redux";
@@ -75,7 +76,7 @@ export default function Navbar() {
       <Button
         color="inherit"
         component={Link}
-        href="#products"
+        href="/#products"
         sx={{
           fontWeight: 600,
           letterSpacing: 1,
@@ -126,7 +127,7 @@ export default function Navbar() {
           <Toolbar
             sx={{
               justifyContent: "space-between",
-              minHeight: { xs: 60, sm: 72 },
+              minHeight: { xs: 65, sm: 72 },
               px: { xs: 1, sm: 3 },
             }}
           >
@@ -233,7 +234,7 @@ export default function Navbar() {
                 PaperProps={{
                   sx: {
                     mt: 1,
-                    minWidth: 170,
+                    minWidth: 200,
                     borderRadius: 2,
                     boxShadow: "0 4px 24px 0 rgba(127,0,255,0.10)",
                     bgcolor: "#fff",
@@ -252,7 +253,7 @@ export default function Navbar() {
                 <>
                   <IconButton
                     color="inherit"
-                    onClick={() => setMobileMenuOpen(true)}
+                    onClick={() => setMobileMenuOpen((prev) => !prev)}
                     sx={{
                       borderRadius: 99,
                       background: "rgba(255,255,255,0.08)",
@@ -262,9 +263,10 @@ export default function Navbar() {
                       },
                     }}
                   >
-                    <MenuIcon />
+                    {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
                   </IconButton>
                   <Drawer
+                    disableGutters={true}
                     anchor="right"
                     open={mobileMenuOpen}
                     onClose={() => setMobileMenuOpen(false)}
@@ -279,7 +281,8 @@ export default function Navbar() {
                   >
                     <Box
                       sx={{
-                        p: 3,
+                        mt: 10,
+                        py: 3,
                         display: "flex",
                         flexDirection: "column",
                         gap: 2,

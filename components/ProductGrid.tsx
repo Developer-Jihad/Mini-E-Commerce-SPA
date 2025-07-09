@@ -18,7 +18,7 @@ export default function ProductGrid() {
         columns={{ xs: 4, sm: 8, md: 12 }}
       >
         {products.map((product) => (
-          <Grid key={product.id} size={{ xs: 2, sm: 4, md: 4 }}>
+          <Grid key={product.id} size={{ xs: 4, sm: 4, md: 4 }}>
             <ProductCard product={product} />
           </Grid>
         ))}

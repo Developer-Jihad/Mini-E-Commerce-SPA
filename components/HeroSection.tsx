@@ -15,7 +15,7 @@ export default function HeroSection() {
         justifyContent: "center",
         color: "#fff", // Make text white
         textAlign: "center",
-        p: 4,
+        p: 1,
         mt: 8,
         position: "relative",
         "&:before": {
@@ -35,15 +35,24 @@ export default function HeroSection() {
           variant="h3"
           fontWeight={700}
           gutterBottom
-          sx={{ color: "#fff" }}
+          sx={{
+            color: "#fff",
+            fontSize: {
+              xs: "2rem", // phones
+              sm: "2.5rem", // tablets
+              md: "3rem", // small laptops
+              lg: "3.5rem", // desktops
+            },
+          }}
         >
           Discover Smart Gadgets
         </Typography>
+
         <Typography variant="h6" mb={4} sx={{ color: "#fff" }}>
           Shop the latest tech — wireless, wearable, and wonderful.
           <br />
-          Find exclusive deals on headphones, smartwatches, speakers, and more,
-          all in one place.
+          Find exclusive deals on smart phones, smart watches, speakers, and all
+          in one place.
         </Typography>
         <Button
           href="#products"
@@ -60,10 +69,11 @@ export default function HeroSection() {
             fontWeight: 700,
             fontSize: "1.1rem",
             textTransform: "none",
-            transition: "background 0.3s",
+            transition: "background 0.3s, transform 0.2s",
             "&:hover": {
               background:
                 "linear-gradient(90deg,rgb(206, 33, 157) 0%,  #7F00FF 100%)",
+              transform: "scale(1.05)",
             },
           }}
         >
