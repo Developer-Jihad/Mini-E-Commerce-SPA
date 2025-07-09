@@ -65,7 +65,14 @@ export default function Navbar() {
 
   return (
     <>
-      <AppBar position="sticky" color="primary">
+      <AppBar
+        position="fixed"
+        color="primary"
+        sx={{
+          top: 0,
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+        }}
+      >
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/* Left: Logo */}
           <Typography
@@ -143,6 +150,9 @@ export default function Navbar() {
           </Box>
         </Toolbar>
       </AppBar>
+
+      {/* Cart Sidebar */}
+      <CartSidebar open={cartOpen} toggle={toggleCart} />
     </>
   );
 }
