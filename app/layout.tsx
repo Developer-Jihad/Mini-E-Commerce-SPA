@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import { Lexend, Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import { CssBaseline } from "@mui/material";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// Load fonts
 const lexend = Lexend({
   subsets: ["latin"],
   variable: "--font-lexend",
@@ -34,7 +32,6 @@ export default function RootLayout({
     <html lang="en" className={`${lexend.variable} ${inter.variable}`}>
       <body>
         <Providers>
-          <CssBaseline />
           <Navbar />
           {children}
           <Footer />

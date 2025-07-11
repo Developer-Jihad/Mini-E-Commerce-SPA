@@ -67,7 +67,7 @@ export default function ProductCard({ product }: { product: Product }) {
         </Box>
         <CardContent sx={{ flexGrow: 1 }}>
           <Typography
-            variant="subtitle1"
+            variant="h5"
             fontWeight={700}
             gutterBottom
             sx={{

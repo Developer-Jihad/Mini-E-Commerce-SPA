@@ -38,17 +38,17 @@ export default function HeroSection() {
           sx={{
             color: "#fff",
             fontSize: {
-              xs: "2rem", // phones
-              sm: "2.5rem", // tablets
-              md: "3rem", // small laptops
-              lg: "3.5rem", // desktops
+              xs: "1.5rem", // phones
+              sm: "2rem", // tablets
+              md: "2.5rem", // small laptops
+              lg: "3rem", // desktops
             },
           }}
         >
           Discover Smart Gadgets
         </Typography>
 
-        <Typography variant="h6" mb={4} sx={{ color: "#fff" }}>
+        <Typography mb={4} sx={{ color: "#fff" }}>
           Shop the latest tech — wireless, wearable, and wonderful.
           <br />
           Find exclusive deals on smart phones, smart watches, speakers, and all

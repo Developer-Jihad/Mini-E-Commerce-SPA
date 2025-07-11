@@ -259,7 +259,7 @@ export default function ProductDetailClient({
                   </Typography>
                   <Link href={`/product/${rel.id}`} passHref>
                     <Box
-                      component="a" // Use component="a" for proper link behavior with MUI
+                      component="a"
                       sx={{
                         color: "primary.main",
                         fontWeight: 600,
