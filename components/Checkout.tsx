@@ -153,7 +153,7 @@ export default function Checkout({ open, onClose, onSubmit }: CheckoutProps) {
           variant="contained"
           sx={{
             borderRadius: 99,
-            px: 4,
+            px: 3,
             fontWeight: 700,
             background: "#f5a008",
             boxShadow: "0 2px 8px 0 rgba(127,0,255,0.10)",
