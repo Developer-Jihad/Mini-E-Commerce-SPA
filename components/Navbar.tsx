@@ -132,36 +132,15 @@ export default function Navbar() {
             }}
           >
             {/* Left: Logo */}
-            <Stack direction="row" alignItems="center" spacing={1}>
-              <Box
-                component={Link}
-                href="/"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textDecoration: "none",
-                  color: "white",
-                  fontWeight: 700,
-                  fontSize: { xs: "1.2rem", sm: "1.5rem" },
-                  letterSpacing: 1,
-                  transition: "opacity 0.2s",
-                  "&:hover": { opacity: 0.8 },
-                }}
+            <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
+              <Typography
+                variant="h6"
+                fontWeight={700}
+                sx={{ display: { xs: "none", sm: "block" } }}
               >
-                <Box
-                  component="span"
-                  sx={{
-                    fontSize: "1.6rem",
-                    mr: 1,
-                    display: "inline-block",
-                    transform: "translateY(2px)",
-                  }}
-                >
-                  🛍️
-                </Box>
-                ShopMate
-              </Box>
-            </Stack>
+                🛍️ ShopMate
+              </Typography>
+            </Link>
 
             {/* Center: Navigation Links (hide on mobile) */}
             {!isMobile && (

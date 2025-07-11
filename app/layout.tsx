@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Lexend, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const lexend = Lexend({
+const headingFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-lexend",
+  variable: "--font-heading",
   display: "swap",
 });
 
-const inter = Inter({
+const paragraphFont = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-paragraph",
   display: "swap",
 });
 
@@ -29,7 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lexend.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      className={`${headingFont.variable} ${paragraphFont.variable}`}
+    >
       <body>
         <Providers>
           <Navbar />

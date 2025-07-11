@@ -23,29 +23,29 @@ const theme = createTheme({
   },
   typography: {
     
-    fontFamily: "var(--font-inter)",
+    fontFamily: "var(--font-paragraph)", 
     h1: {
-      fontFamily: "var(--font-lexend)",
+      fontFamily: "var(--font-heading)",
       fontWeight: 700,
     },
     h2: {
-      fontFamily: "var(--font-lexend)",
+      fontFamily: "var(--font-heading)",
       fontWeight: 700,
     },
     h3: {
-      fontFamily: "var(--font-lexend)",
+      fontFamily: "var(--font-heading)",
       fontWeight: 600,
     },
     h4: {
-      fontFamily: "var(--font-lexend)",
+      fontFamily: "var(--font-heading)",
       fontWeight: 600,
     },
     h5: {
-      fontFamily: "var(--font-lexend)",
+      fontFamily: "var(--font-heading)",
       fontWeight: 500,
     },
     h6: {
-      fontFamily: "var(--font-lexend)",
+      fontFamily: "var(--font-heading)",
       fontWeight: 500,
     },
     button: {

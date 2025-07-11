@@ -24,8 +24,8 @@ import {
   decreaseQuantity,
   clearCart,
 } from "../store/slices/cartSlice";
-import CheckoutModal from "./CheckoutModal";
 import { useState } from "react";
+import Checkout from "./Checkout";
 
 type Props = {
   open: boolean;
@@ -244,7 +244,7 @@ export default function CartSidebar({ open, toggle }: Props) {
         >
           Checkout
         </Button>
-        <CheckoutModal
+        <Checkout
           open={checkoutOpen}
           onClose={() => setCheckoutOpen(false)}
           onSubmit={() => {

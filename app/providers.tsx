@@ -10,7 +10,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ReduxProvider store={store}>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline resets browser styles and applies background color from your theme */}
         <CssBaseline />
         {children}
       </ThemeProvider>

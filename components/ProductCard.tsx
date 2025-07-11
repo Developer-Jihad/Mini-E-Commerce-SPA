@@ -72,7 +72,7 @@ export default function ProductCard({ product }: { product: Product }) {
             gutterBottom
             sx={{
               color: "#222",
-              fontSize: "1.1rem",
+              fontSize: "1.2rem",
               mb: 0.5,
               minHeight: 48,
               display: "-webkit-box",

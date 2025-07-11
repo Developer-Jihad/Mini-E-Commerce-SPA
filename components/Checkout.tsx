@@ -24,17 +24,13 @@ const Transition = forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-interface CheckoutModalProps {
+interface CheckoutProps {
   open: boolean;
   onClose: () => void;
   onSubmit: () => void;
 }
 
-export default function CheckoutModal({
-  open,
-  onClose,
-  onSubmit,
-}: CheckoutModalProps) {
+export default function Checkout({ open, onClose, onSubmit }: CheckoutProps) {
   const [form, setForm] = useState({
     name: "",
     email: "",
