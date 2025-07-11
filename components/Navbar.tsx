@@ -266,7 +266,6 @@ export default function Navbar() {
                     {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
                   </IconButton>
                   <Drawer
-                    disableGutters={true}
                     anchor="right"
                     open={mobileMenuOpen}
                     onClose={() => setMobileMenuOpen(false)}

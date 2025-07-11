@@ -16,13 +16,18 @@ import { addToCart } from "@/store/slices/cartSlice";
 import Link from "next/link";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-type Product = {
+// example definition
+export interface Product {
   id: string;
   title: string;
-  image: string;
-  price: number;
   description: string;
-};
+  price: number;
+  image: string;
+  image2?: string;
+  image3?: string;
+  category?: string;
+  [key: string]: any;
+}
 
 export default function ProductCard({ product }: { product: Product }) {
   const dispatch = useDispatch<AppDispatch>();

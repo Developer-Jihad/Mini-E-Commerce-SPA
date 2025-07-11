@@ -65,7 +65,7 @@ export const products = [
   {
     id: '8',
     title: 'USB-C Hub Adapter',
-    image: 'https://images.unsplash.com/photo-1596877445530-ad74838754c6?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // usb-c hub
+    image: 'https://images.unsplash.com/photo-1731616103600-3fe7ccdc5a59?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // usb-c hub
     image2: 'https://images.unsplash.com/photo-1596877445530-ad74838754c6?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     image3: 'https://plus.unsplash.com/premium_photo-1669261149433-febd56c05327?q=80&w=415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     price: 34.99,

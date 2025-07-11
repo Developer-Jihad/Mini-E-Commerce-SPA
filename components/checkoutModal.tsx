@@ -73,7 +73,7 @@ export default function CheckoutModal({
           display: "flex",
           alignItems: "center",
           gap: 2,
-          bgcolor: "primary.main",
+          background: "linear-gradient(90deg, #181c24 0%, #2d2250 100%)",
           color: "#fff",
           fontWeight: 700,
           fontSize: "1.4rem",
@@ -159,13 +159,10 @@ export default function CheckoutModal({
             borderRadius: 99,
             px: 4,
             fontWeight: 700,
-            background: "linear-gradient(90deg, #7F00FF 0%, #0072ff 100%)",
+            background: "#f5a008",
             boxShadow: "0 2px 8px 0 rgba(127,0,255,0.10)",
             textTransform: "none",
             fontSize: "1.08rem",
-            "&:hover": {
-              background: "linear-gradient(90deg, #0072ff 0%, #7F00FF 100%)",
-            },
           }}
         >
           Submit Order
