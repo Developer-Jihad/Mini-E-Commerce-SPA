@@ -127,17 +127,13 @@ export default function Navbar() {
           <Toolbar
             sx={{
               justifyContent: "space-between",
-              minHeight: { xs: 65, sm: 72 },
+              minHeight: { xs: 65, sm: 65 },
               px: { xs: 1, sm: 3 },
             }}
           >
             {/* Left: Logo */}
             <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
-              <Typography
-                variant="h6"
-                fontWeight={700}
-                sx={{ display: { xs: "none", sm: "block" } }}
-              >
+              <Typography variant="h6" fontWeight={700}>
                 🛍️ ShopMate
               </Typography>
             </Link>
@@ -253,7 +249,7 @@ export default function Navbar() {
                         bgcolor: "#181c24",
                         color: "#fff",
                         width: 220,
-                        p: 0,
+                        p: 2,
                       },
                     }}
                   >

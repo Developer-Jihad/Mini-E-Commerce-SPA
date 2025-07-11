@@ -32,12 +32,18 @@ export default function Footer() {
           direction={{ xs: "column", sm: "row" }}
           spacing={2}
           justifyContent="space-between"
-          alignItems={{ xs: "flex-start", sm: "center" }}
+          alignItems={{ xs: "center", sm: "flex-end" }}
           sx={{ maxWidth: "1140px", mx: "auto" }}
         >
           {/* Left: Branding */}
-          <Box>
-            <Stack direction="row" alignItems="center" spacing={1}>
+          <Box sx={{ textAlign: { xs: "center", sm: "left" } }}>
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent={{ xs: "center", sm: "flex-start" }}
+              spacing={1}
+              mb={1}
+            >
               <Box
                 component="span"
                 sx={{
@@ -53,6 +59,7 @@ export default function Footer() {
                 ShopMate
               </Typography>
             </Stack>
+            <Typography>Enjoy the best Shopping Experience with us!</Typography>
             <Typography variant="body2" color="#8b949e" mt={1}>
               &copy; {new Date().getFullYear()} ShopMate Inc. All rights
               reserved.
@@ -65,14 +72,22 @@ export default function Footer() {
           />
 
           {/* Right: Developer Info */}
-          <Box id="about" sx={{ minWidth: 220 }}>
+          <Box
+            id="about"
+            sx={{ minWidth: 220, textAlign: { xs: "center", sm: "right" } }}
+          >
             <Typography variant="body2" fontWeight="bold" color="#fff">
-              Developed by Md Jihad Hossain
+              Developed by - Md Jihad Hossain
             </Typography>
-            <Typography variant="body2" color="#b3b3b3" mb={1}>
+            {/* <Typography variant="body2" color="#b3b3b3" my={1}>
               Frontend Developer
-            </Typography>
-            <Stack direction="row" spacing={1} mt={1}>
+            </Typography> */}
+            <Stack
+              direction="row"
+              sx={{ justifyContent: { xs: "center", sm: "right" } }}
+              spacing={2}
+              mt={1}
+            >
               <IconButton
                 href="https://jihad-info.vercel.app/"
                 target="_blank"
