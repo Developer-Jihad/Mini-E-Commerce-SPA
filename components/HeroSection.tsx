@@ -38,7 +38,7 @@ export default function HeroSection() {
           sx={{
             color: "#fff",
             fontSize: {
-              xs: "1.5rem", // phones
+              xs: "2rem", // phones
               sm: "2rem", // tablets
               md: "2.5rem", // small laptops
               lg: "3rem", // desktops

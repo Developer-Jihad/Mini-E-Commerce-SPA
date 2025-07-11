@@ -133,7 +133,7 @@ export default function Navbar() {
           >
             {/* Left: Logo */}
             <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
-              <Typography variant="h6" fontWeight={700}>
+              <Typography variant="h5" fontWeight={700}>
                 🛍️ ShopMate
               </Typography>
             </Link>
