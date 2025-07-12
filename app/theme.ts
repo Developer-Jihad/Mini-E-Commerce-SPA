@@ -5,12 +5,12 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    mode: "light", // Can be 'light' or 'dark'
+    mode: "light",
     primary: {
-      main: "#7F00FF", // A vibrant purple
+      main: "#7F00FF", 
     },
     secondary: {
-      main: "#f5a008", // A warm orange/yellow
+      main: "#f5a008",
     },
     background: {
       default: "#f4f6f8",
@@ -49,16 +49,16 @@ const theme = createTheme({
       fontWeight: 500,
     },
     button: {
-      textTransform: "none", // Optional: prevent uppercase buttons
+      textTransform: "none", 
       fontWeight: 600,
     },
   },
   components: {
-    // Example of customizing a specific component
+    
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 8, // Rounded buttons
+          borderRadius: 8, 
         },
       },
     },

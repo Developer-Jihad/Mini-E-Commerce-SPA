@@ -1,11 +1,8 @@
-// REMOVE "use client";
-
 import { products } from "../../../data/products";
 import { notFound } from "next/navigation";
-import ProductDetailClient from "./ProductDetailClient"; // Import the new client component
+import ProductDetailClient from "./ProductDetailClient";
 import { Product } from "@/components/ProductCard";
 
-// Define the props type according to Next.js 15 standards (params is a Promise)
 type PageProps = {
   params: Promise<{
     id: string;
@@ -23,13 +20,11 @@ export default async function ProductDetailPage({ params }: PageProps) {
     return notFound();
   }
 
-  // Calculate related products here (on the server)
   const relatedProducts = products
     .filter((p) => p.id !== product.id)
     .sort(() => 0.5 - Math.random())
     .slice(0, 4);
 
-  // Render the Client Component and pass the data
   return (
     <ProductDetailClient product={product} relatedProducts={relatedProducts} />
   );

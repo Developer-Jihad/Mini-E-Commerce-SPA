@@ -13,7 +13,7 @@ export default function HeroSection() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        color: "#fff", // Make text white
+        color: "#fff",
         textAlign: "center",
         p: 1,
         mt: 8,
@@ -25,8 +25,7 @@ export default function HeroSection() {
           left: 0,
           width: "100%",
           height: "100%",
-          bgcolor: "rgba(0,0,0,0.6)", // dark overlay for readability
-          zIndex: 1,
+          bgcolor: "rgba(0,0,0,0.6)",
         },
       }}
     >
@@ -38,10 +37,10 @@ export default function HeroSection() {
           sx={{
             color: "#fff",
             fontSize: {
-              xs: "2rem", // phones
-              sm: "2rem", // tablets
-              md: "2.5rem", // small laptops
-              lg: "3rem", // desktops
+              xs: "2rem",
+              sm: "2rem",
+              md: "2.5rem",
+              lg: "3rem",
             },
           }}
         >

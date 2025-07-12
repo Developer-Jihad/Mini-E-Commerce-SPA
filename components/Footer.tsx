@@ -79,9 +79,7 @@ export default function Footer() {
             <Typography variant="body2" fontWeight="bold" color="#fff">
               Developed by - Md Jihad Hossain
             </Typography>
-            {/* <Typography variant="body2" color="#b3b3b3" my={1}>
-              Frontend Developer
-            </Typography> */}
+
             <Stack
               direction="row"
               sx={{ justifyContent: { xs: "center", sm: "right" } }}

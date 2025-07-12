@@ -22,7 +22,6 @@ function getProductImages(product: Product) {
   return [product.image, product.image2, product.image3];
 }
 
-// Define the props this client component expects
 type ClientProps = {
   product: Product;
   relatedProducts: Product[];
@@ -32,7 +31,6 @@ export default function ProductDetailClient({
   product,
   relatedProducts,
 }: ClientProps) {
-  // All "use client" hooks and state management remain here
   const dispatch: AppDispatch = useDispatch();
   const [selectedImage, setSelectedImage] = useState(
     getProductImages(product)[0]
