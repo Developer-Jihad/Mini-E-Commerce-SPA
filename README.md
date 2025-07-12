@@ -25,7 +25,7 @@ Check out the live version of the application hosted on Vercel:
 
 ## 🛠 Tech Stack
 
-- **Framework:** [Next.js](https://nextjs.org/) 14+ (App Router)
+- **Framework:** [Next.js](https://nextjs.org/) 15+ (App Router)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **UI Library:** [Material-UI (MUI)](https://mui.com/)
 - **State Management:** [Redux](https://react-redux.js.org/)
